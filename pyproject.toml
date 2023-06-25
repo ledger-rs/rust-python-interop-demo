@@ -1,12 +1,12 @@
-# [build-system]
-# requires = ["maturin>=0.14,<0.15"]
-# build-backend = "maturin"
+[build-system]
+requires = ["maturin>=0.14,<0.15"]
+build-backend = "maturin"
 
-# [project]
-# name = "rust_interop"
+[project]
+name = "rust_interop"
 # requires-python = ">=3.7"
-# classifiers = [
-#     "Programming Language :: Rust",
-#     "Programming Language :: Python :: Implementation :: CPython",
-#     "Programming Language :: Python :: Implementation :: PyPy",
-# ]
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
