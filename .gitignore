@@ -19,5 +19,4 @@ Cargo.lock
 /target
 
 # Python
-Scripts/
-Lib/
+.env/
