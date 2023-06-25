@@ -7,6 +7,7 @@ mod demo1;
 use pyo3::prelude::*;
 
 #[pyclass]
+#[derive(Debug, Default)]
 pub struct Model {
     name: String,
 }
@@ -14,8 +15,10 @@ pub struct Model {
 #[pymethods]
 impl Model {
     #[new]
-    pub fn new(name: String) -> Self {
-        Self { name }
+    pub fn new() -> PyResult<Self> {
+        // name: String
+        //Ok(Self { name: "Test".to_owned() })
+        Ok(Self::default())
     }
 }
 
@@ -28,8 +31,10 @@ pub fn test() -> String {
 pub fn use_shared_object() -> Vec<Model> {
     let mut result = vec![];
 
-    result.push(Model::new("first".to_owned()));
-    result.push(Model::new("second".to_owned()));
+    // result.push(Model::new("first".to_owned()));
+    // result.push(Model::new("second".to_owned()));
+
+    result.push(Model::default());
 
     println!("Objects: {}", result.len());
 

@@ -6,5 +6,6 @@ rust_interop.use_shared_object()
 
 print("Now instantiating the struct...")
 
-o = rust_interop.Model("first")
+# o = rust_interop.Model("first")
+o = rust_interop.Model()
 print(o)
